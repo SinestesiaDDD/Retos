@@ -28,13 +28,13 @@ public class Computer implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name; 
-    private String address;
-    private Integer  extension; 
+    private String brand;
+    private Integer  year; 
     private String description;
     
     @ManyToOne
     @JoinColumn(name="categoryid")
-    @JsonIgnoreProperties("computer")
+    @JsonIgnoreProperties("computers")
     private Categoria category;
     
     @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "computer")
@@ -61,20 +61,20 @@ public class Computer implements Serializable {
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
-    public Integer getExtension() {
-        return extension;
+    public Integer getYear() {
+        return year;
     }
 
-    public void setExtension(Integer extension) {
-        this.extension = extension;
+    public void setYear(Integer year) {
+        this.year = year;
     }
 
     public String getDescription() {
@@ -108,8 +108,8 @@ public class Computer implements Serializable {
     public void setReservations(List<Reservacion> reservations) {
         this.reservations = reservations;
     }
-    
-    
+
+   
    
    
     

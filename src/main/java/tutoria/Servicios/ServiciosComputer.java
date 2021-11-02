@@ -47,11 +47,11 @@ public class ServiciosComputer {
                 if(computer.getName()!=null){
                     e.get().setName(computer.getName());
                 }
-                if(computer.getAddress()!=null){
-                    e.get().setAddress(computer.getAddress());
+                if(computer.getYear()!=null){
+                    e.get().setYear(computer.getYear());
                 }
-                if(computer.getExtension()!=null){
-                    e.get().setExtension(computer.getExtension());
+                if(computer.getBrand()!=null){
+                    e.get().setBrand(computer.getBrand());
                 }
                 if(computer.getDescription()!=null){
                     e.get().setDescription(computer.getDescription());
